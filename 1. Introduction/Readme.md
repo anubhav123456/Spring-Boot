@@ -210,11 +210,81 @@ public class Payment
 }
 ```
 
-❌ Cannot mock
-❌ Hard unit testing
-❌ Strong dependency
+👉 `Payment` is **tightly coupled** to the `User` class.
+
+* ❌ Cannot mock
+* ❌ Hard unit testing
+* ❌ Strong dependency
 
 ---
+
+## Disadvantages of Tight Coupling
+
+### ❌ 1. Hard to Change Code
+
+If `User` class changes:
+
+* Constructor changes
+* Method signature changes
+
+➡ `Payment` **will break**
+
+In large Spring Boot projects, this causes **chain reaction bugs**.
+
+---
+
+### ❌ 2. Difficult Unit Testing
+
+Suppose you want to test `Payment`.
+
+You **cannot mock User** easily:
+
+```java
+// You can't replace User with a mock
+User sender = new User();
+```
+
+So:
+
+* Real DB calls may happen
+* Real API calls may happen
+* Tests become slow & unreliable
+
+❗ This is a **big problem in Spring Boot testing**
+
+---
+
+### ❌ 3. Violates SOLID Principles
+
+Specifically:
+
+* ❌ **Dependency Inversion Principle (DIP)**
+
+High-level module (`Payment`) should **not depend on low-level module (`User`)**
+Both should depend on **abstractions**
+
+Your code violates this.
+
+---
+
+### ❌ 4. No Spring Benefits Used
+
+Spring Boot is built for:
+
+* Dependency Injection
+* Loose Coupling
+* Easy configuration
+
+But your code:
+
+* Uses `new`
+* Skips Spring container
+* Ignores IoC
+
+➡ You’re writing **plain Java**, not Spring-style code.
+
+---
+
 
 ### 🔹 Solution: Dependency Injection (Spring)
 
