@@ -157,11 +157,11 @@ if (path.equals("/first")) {
 
 ## 4️⃣ Problems with Servlets
 
-❌ Tight coupling
-❌ Hard unit testing
-❌ Massive `web.xml`
-❌ Poor REST API structure
-❌ Manual server deployment
+* ❌ Tight coupling
+* ❌ Hard unit testing
+* ❌ Massive `web.xml`
+* ❌ Poor REST API structure
+* ❌ Manual server deployment
 
 ---
 
