@@ -185,6 +185,9 @@ Spring MVC solved servlet issues using:
 
 ### 🔹 Problem: Tight Coupling (Without DI)
 
+**Tight coupling** means:
+> One class is **directly dependent** on another concrete class.
+
 ```java
 public class User 
 {
