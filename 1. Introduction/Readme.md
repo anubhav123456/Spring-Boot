@@ -351,19 +351,24 @@ Response
 
 ```java
 @Controller
-@RequestMapping("/payment")
-public class PaymentController {
+@RequestMapping("/paymentapi")
+public class PaymentController 
+{
 
-    @GetMapping("/details")
-    public String getPaymentDetails() {
-        return "payment-details";
+    @Autowired
+    PaymentDAO paymentService;
+
+    @GetMapping("/payment")
+    public String getPaymentDetails() 
+    {
+        return paymentService.getDetails();
     }
 }
 ```
 
-✔ No if-else
-✔ One API = One method
-✔ Clean REST structure
+* ✔ No if-else
+* ✔ One API = One method
+* ✔ Clean REST structure
 
 ---
 
