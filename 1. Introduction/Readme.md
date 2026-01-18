@@ -186,12 +186,23 @@ Spring MVC solved servlet issues using:
 ### 🔹 Problem: Tight Coupling (Without DI)
 
 ```java
-public class PaymentService {
+public class User 
+{
 
-    UserService userService = new UserService();
+    public void getUserDetails(String id) 
+    {
+        //do something
+    }
+}
 
-    public String getSenderDetails(int id) {
-        return userService.getUserDetails(id);
+public class Payment 
+{
+
+    User sender = new User();
+
+    void getSenderDetails(String userID)
+    {
+        sender.getUserDetails(userID);
     }
 }
 ```
