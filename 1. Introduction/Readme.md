@@ -320,6 +320,9 @@ public class PaymentService
 
 📌 **DI is an implementation of IoC**
 
+* `@Component`: tells Spring that, you have to manage this class or bean. 
+* `@Autowired`: tells Spring to resolve and add this object dependency.
+
 ---
 
 ## 7️⃣ Spring MVC Request Flow
