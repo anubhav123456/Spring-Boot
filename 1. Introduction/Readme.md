@@ -2,7 +2,7 @@
 
 ---
 
-# 📘 Introduction to Spring Boot – Complete Notes
+# 📘 Introduction to Spring Boot
 
 ## 1️⃣ Why Spring Boot Exists?
 
@@ -53,12 +53,34 @@ To understand Spring Boot properly, we must go step-by-step:
 ### 🔹 Example: Servlet Code
 
 ```java
-@WebServlet("/demoServlet1")
-public class DemoServlet1 extends HttpServlet {
+@WebServlet("/demoservletone/*")
+public class DemoServlet1 extends HttpServlet 
+{
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
-        // processing logic
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    {
+
+        String requestPathInfo = request.getPathInfo();
+
+        if(requestPathInfo.equals("/")) 
+        {
+            //do something
+        }
+        else if(requestPathInfo.equals("/firstendpoint")) 
+        {
+            //do something
+        }
+        else if(requestPathInfo.equals("/secondendpoint")) 
+        {
+            //do something
+        }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) 
+    {
+        //do something
     }
 }
 ```
@@ -66,12 +88,20 @@ public class DemoServlet1 extends HttpServlet {
 Another servlet:
 
 ```java
-@WebServlet("/demoServlet2")
-public class DemoServlet2 extends HttpServlet {
+@WebServlet("/demoservlettwo/*")
+public class DemoServlet2 extends HttpServlet 
+{
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-        // processing logic
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    {
+        //do something
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) 
+    {
+        //do something
     }
 }
 ```
@@ -83,12 +113,24 @@ public class DemoServlet2 extends HttpServlet {
 ```xml
 <servlet>
     <servlet-name>DemoServlet1</servlet-name>
-    <servlet-class>com.example.DemoServlet1</servlet-class>
+    <servlet-class>DemoServlet1</servlet-class>
 </servlet>
 
 <servlet-mapping>
     <servlet-name>DemoServlet1</servlet-name>
-    <url-pattern>/demoServlet1/*</url-pattern>
+    <url-pattern>/demoservletone</url-pattern>
+    <url-pattern>/demoservletone/firstendpoint</url-pattern>
+    <url-pattern>/demoservletone/secondendpoint</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>DemoServlet2</servlet-name>
+    <servlet-class>DemoServlet2</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>DemoServlet2</servlet-name>
+    <url-pattern>/demoservlettwo</url-pattern>
 </servlet-mapping>
 ```
 
