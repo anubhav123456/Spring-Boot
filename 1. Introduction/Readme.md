@@ -290,8 +290,10 @@ But your code:
 
 ```java
 @Component
-public class UserService {
-    public String getUserDetails(int id) {
+public class UserService 
+{
+    public String getUserDetails(int id) 
+    {
         return "User " + id;
     }
 }
@@ -299,20 +301,22 @@ public class UserService {
 
 ```java
 @Component
-public class PaymentService {
+public class PaymentService 
+{
 
     @Autowired
     private UserService userService;
 
-    public String getSenderDetails(int id) {
+    public String getSenderDetails(int id) 
+    {
         return userService.getUserDetails(id);
     }
 }
 ```
 
-✅ Loose coupling
-✅ Easy mocking
-✅ Easy unit testing
+* ✅ Loose coupling
+* ✅ Easy mocking
+* ✅ Easy unit testing
 
 📌 **DI is an implementation of IoC**
 
