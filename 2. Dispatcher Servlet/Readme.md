@@ -62,12 +62,12 @@ Response
 ### 🧩 Servlet Class
 
 ```java
-public class DemoServletOne extends HttpServlet {
+public class DemoServletOne extends HttpServlet 
+{
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException 
+    {
         resp.getWriter().write("Hello from Servlet");
     }
 }
@@ -145,15 +145,18 @@ Response
 ```java
 @Controller
 @RequestMapping("/payment")
-public class PaymentController {
+public class PaymentController 
+{
 
     @GetMapping("/status")
-    public String getPaymentStatus() {
+    public String getPaymentStatus() 
+    {
         return "Payment Successful";
     }
 
     @GetMapping("/details")
-    public String getPaymentDetails() {
+    public String getPaymentDetails() 
+    {
         return "Payment Details";
     }
 }
