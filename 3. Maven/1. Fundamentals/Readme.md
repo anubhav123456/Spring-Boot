@@ -87,9 +87,9 @@ mvn compile
 * Where source code exists
 * Where compiled classes go
 
-✅ Less configuration
-✅ Convention over configuration
-✅ Standard project structure
+* ✅ Less configuration
+* ✅ Convention over configuration
+* ✅ Standard project structure
 
 ---
 
