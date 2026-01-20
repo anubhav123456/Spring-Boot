@@ -2,11 +2,11 @@
 
 ---
 
-## 1. DispatcherServlet & Handler Mapping (Big Picture)
+## 1. Dispatcher Servlet & Handler Mapping
 
-* **DispatcherServlet** is the front controller in Spring Boot.
+* **Dispatcher Servlet** is the front controller in Spring Boot.
 * Every incoming HTTP request first goes to the DispatcherServlet.
-* DispatcherServlet uses **HandlerMapping** to:
+* Dispatcher Servlet uses **HandlerMapping** to:
 
   1. Identify *which controller* can handle the request
   2. Identify *which method* inside that controller should be invoked
