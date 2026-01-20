@@ -61,8 +61,8 @@
   * Source directory
   * Destination directory
 
-❌ More manual work
-❌ No standard project structure
+* ❌ More manual work
+* ❌ No standard project structure
 
 ---
 
