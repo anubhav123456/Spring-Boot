@@ -71,6 +71,15 @@ public class SampleController {
 
 ---
 
+## One-Liner
+
+🔥 **Important Note**:
+
+> “In `@Controller`, return value is treated as view name unless `@ResponseBody` is used.
+> `@RestController` avoids view resolution and directly returns response body.”
+
+---
+
 ## 3. @RequestMapping & Specialized Mappings
 
 ### @RequestMapping
