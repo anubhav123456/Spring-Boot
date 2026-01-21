@@ -211,7 +211,9 @@ public class Order {
 ### Disadvantages
 
 ❌ Cannot make fields `final`
+
 ❌ Dependency not obvious (poor readability)
+
 ❌ Object can exist in partially initialized state
 
 ---
