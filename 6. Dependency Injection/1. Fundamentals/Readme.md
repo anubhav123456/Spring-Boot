@@ -298,10 +298,15 @@ public User(Invoice invoice) {
 ## 11. Advantages of Constructor Injection
 
 ✔ Mandatory dependencies enforced
+
 ✔ Fields can be `final` (immutable)
+
 ✔ Fail-fast (startup failure if dependency missing)
+
 ✔ Easier unit testing
+
 ✔ Fully initialized object
+
 
 ### Disadvantage (Actually an Advantage)
 
