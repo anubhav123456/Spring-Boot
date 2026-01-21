@@ -205,6 +205,7 @@ public class Order {
 ### Advantages
 
 ✔ Dependency can be changed later
+
 ✔ Easier unit testing (no reflection needed)
 
 ### Disadvantages
