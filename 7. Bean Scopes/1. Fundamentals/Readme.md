@@ -2,22 +2,6 @@
 
 ---
 
-## Prerequisites
-
-Before understanding Scopes, you must clearly understand
-
- What is a Spring Bean
- Bean Life Cycle
-
-   Bean instantiation
-   Dependency injection
-   `@PostConstruct`
-   Ready-to-use bean
-
-Understanding the bean lifecycle helps you visualize when and how many times an object is created for each scope.
-
----
-
 ## Types of Scopes in Spring
 
 Spring provides 5 major bean scopes
