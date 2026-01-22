@@ -198,9 +198,9 @@ public class User {
 
 ### Prototype Behavior
 
- New `User` object for every injection
- Student (singleton) keeps its own User instance
- Controller gets a new User every request
+* New `User` object for every injection
+* Student (singleton) keeps its own User instance
+* Controller gets a new User every request
 
 ---
 
@@ -208,9 +208,9 @@ public class User {
 
 ### Key Points
 
- One object per HTTP request
- Lazily initialized
- Same object reused within the same request
+* One object per HTTP request
+* Lazily initialized
+* Same object reused within the same request
 
 ---
 
