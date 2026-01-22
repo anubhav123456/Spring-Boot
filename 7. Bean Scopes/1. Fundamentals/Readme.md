@@ -108,9 +108,9 @@ public class User {
 
 ### Singleton Behavior
 
- All controllers share same User instance
- Objects are created before any API call
- No new object on API invocation
+* All controllers share same User instance
+* Objects are created before any API call
+* No new object on API invocation
 
 ---
 
