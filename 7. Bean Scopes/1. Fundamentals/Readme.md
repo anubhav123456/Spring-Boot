@@ -118,9 +118,9 @@ public class User {
 
 ### Key Points
 
- New object every time it is requested
- Lazily initialized
- Spring does not manage full lifecycle after creation
+* New object every time it is requested
+* Lazily initialized
+* Spring does not manage full lifecycle after creation
 
 ---
 
