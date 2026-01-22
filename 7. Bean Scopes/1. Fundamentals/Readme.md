@@ -278,9 +278,9 @@ public class User {
 
 ### Request Scope Behavior
 
- New object per HTTP request
- Same object shared within the request
- Different request → new instance
+* New object per HTTP request
+* Same object shared within the request
+* Different request → new instance
 
 ---
 
