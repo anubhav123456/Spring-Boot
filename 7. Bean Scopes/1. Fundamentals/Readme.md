@@ -304,8 +304,8 @@ public class User {}
 
 ❌ Application fails at startup because
 
- Singleton is eagerly initialized
- No active HTTP request exists
+* Singleton is eagerly initialized
+* No active HTTP request exists
 
 ---
 
@@ -317,15 +317,15 @@ public class User {}
 public class User {
 
     public User() {
-        System.out.println(User initialization);
+        System.out.println("User initialization");
     }
 }
 ```
 
 ### How Proxy Works
 
- Dummy proxy object injected at startup
- Real object created when HTTP request arrives
+* Dummy proxy object injected at startup
+* Real object created when HTTP request arrives
 
 ---
 
@@ -333,9 +333,9 @@ public class User {
 
 ### Key Points
 
- One object per HTTP session
- Same object reused across multiple requests
- New object after session invalidation
+* One object per HTTP session
+* Same object reused across multiple requests
+* New object after session invalidation
 
 ---
 
@@ -367,8 +367,8 @@ public class TestController1 {
 
 ### Session Behavior
 
- Same object for same session
- New object after logoutsession expiry
+* Same object for same session
+* New object after logoutsession expiry
 
 ---
 
@@ -376,9 +376,9 @@ public class TestController1 {
 
 ### Key Points
 
- One object shared across multiple IOC containers
- Rarely used
- Similar to Singleton but broader
+* One object shared across multiple IOC containers
+* Rarely used
+* Similar to Singleton but broader
 
 ```java
 @Scope(application)
@@ -400,11 +400,11 @@ public class TestController1 {
 
 ## ✅ Final Takeaways
 
- Singleton is default and eager
- Prototype always creates new objects
- Request & Session are web-aware scopes
- Use proxyMode when mixing scopes
- Always think in terms of bean lifecycle + scope
+* Singleton is default and eager
+* Prototype always creates new objects
+* Request & Session are web-aware scopes
+* Use proxyMode when mixing scopes
+* Always think in terms of bean lifecycle + scope
 
 ---
 
