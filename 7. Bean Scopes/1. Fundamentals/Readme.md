@@ -388,13 +388,14 @@ public class TestController1 {
 
 ## 🔥 Scope Comparison Table
 
- Scope        Objects Created   Lifecycle  Use Case           
- -----------  ----------------  ---------  ------------------ 
- Singleton    One per IOC       Eager      Stateless services 
- Prototype    Every request     Lazy       Temporary objects  
- Request      Per HTTP request  Lazy       Request data       
- Session      Per session       Lazy       User loginsession 
- Application  Per application   Eager      Rare cases         
+
+| Scope       | Objects Created  | Lifecycle | Use Case           |
+| ----------- | ---------------- | --------- | ------------------ |
+| Singleton   | One per IOC      | Eager     | Stateless services |
+| Prototype   | Every request    | Lazy      | Temporary objects  |
+| Request     | Per HTTP request | Lazy      | Request data       |
+| Session     | Per session      | Lazy      | User login/session |
+| Application | Per application  | Eager     | Rare cases         |      
 
 ---
 
