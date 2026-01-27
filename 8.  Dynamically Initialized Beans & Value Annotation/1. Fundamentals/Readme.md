@@ -323,6 +323,7 @@ Unsatisfied dependency happens when:
 You can resolve dynamically using:
 
 1️⃣ **Multiple qualifiers + runtime logic**
+
 2️⃣ **Configuration-based bean creation using @Value**
 
 Both maintain dependency inversion if used properly.
