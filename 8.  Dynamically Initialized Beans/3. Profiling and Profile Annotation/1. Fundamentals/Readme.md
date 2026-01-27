@@ -304,6 +304,7 @@ Bean only created in App1.
 ### 🚨 BUT THIS IS WRONG USAGE
 
 `@Profile` is meant for:
+
 ✔ Dev
 
 ✔ QA
@@ -311,6 +312,7 @@ Bean only created in App1.
 ✔ Prod
 
 Not:
+
 ❌ App1
 
 ❌ App2
