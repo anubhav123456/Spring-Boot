@@ -242,6 +242,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=prod
 ```
 
 ✔ MySQL bean created
+
 ❌ NoSQL bean NOT created
 
 ---
@@ -304,11 +305,14 @@ Bean only created in App1.
 
 `@Profile` is meant for:
 ✔ Dev
+
 ✔ QA
+
 ✔ Prod
 
 Not:
 ❌ App1
+
 ❌ App2
 
 For application-based bean creation use:
