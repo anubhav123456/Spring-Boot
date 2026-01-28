@@ -243,6 +243,22 @@ public class LoggingAspect {
 
 Matches methods with a specific annotation.
 
+### Business Code
+
+```java
+@RestController
+@RequestMapping(value = "/api/")
+public class Employee {
+
+    @GetMapping (path = "/fetchEmployee")
+    public String fetchEmployee(){
+        return "item fetched";
+    }
+}
+```
+
+### Aspect
+
 ```java
 @Aspect
 @Component
